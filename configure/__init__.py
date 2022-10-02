@@ -23,25 +23,33 @@ gamemode={self.gamemode}
 force-gamemode={self.force_gamemode.real}
 online_mode={self.online_mode.real}
 motd={self.motd}
-max-player={self.max_player}
-        """
+max-player={self.max_player}"""
 
 
 class Generator:
     # noinspection PyPep8Naming
-    def __init__(self, serverName: str, gameVersion: str, server_url: str, config: ServerProperties):
+    def __init__(self, serverName: str, gameVersion: str, config: ServerProperties or None, server_type: str):
         self.serverName = serverName
-        self.gameVersion = gameVersion
-        self.server_url = server_url
+        self.gameVersion = gameVersion.lower()
+        self.server_type = server_type.lower()
 
         self.config: ServerProperties = config
+
+        if self.server_type == 'mohist':
+            if not (self.gameVersion == '1.16.5' or self.gameVersion == '1.12.2'):
+                raise Exception('当服务端类型为 mohist 时，只能使用 1.16.5 或 1.12.2 两个版本')
+
+        # 拼接下载地址
+        self.gameVersion.replace('.', '_')
+        self.server_key = f'mohist_{gameVersion}'
 
     def generate(self):
         return json.dumps(
             {
                 'serverName': self.serverName,
                 'gameVersion': self.gameVersion,
-                'server_url':  self.server_url,
+                'server_key': self.server_key,
                 'config': self.config.generate()
-            }
+            },
+            indent=4
         )
