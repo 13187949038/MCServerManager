@@ -36,12 +36,12 @@ class Generator:
         self.config: ServerProperties = config
 
         if self.server_type == 'mohist':
-            if not (self.gameVersion == '1.16.5' or self.gameVersion == '1.12.2'):
-                raise Exception('当服务端类型为 mohist 时，只能使用 1.16.5 或 1.12.2 两个版本')
+            if not (self.gameVersion == '1.16.6' or self.gameVersion == '1.12.2'):
+                raise Exception('当服务端类型为 mohist 时，只能使用 1.16.6 或 1.12.2 两个版本')
 
         # 拼接下载地址
-        self.gameVersion.replace('.', '_')
-        self.server_key = f'mohist_{gameVersion}'
+        self.gameVersion = self.gameVersion.replace('.', '_')
+        self.server_key = f'mohist_{self.gameVersion}'
 
     def generate(self):
         return json.dumps(

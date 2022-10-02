@@ -1,0 +1,50 @@
+[23:05:53] [main/INFO] [STDOUT/]: 检查更新中...
+[23:05:53] [main/INFO] [STDOUT/]: 如果不想启用更新检查，在mohist-config/mohist.yml中设置“check_update”为“false”
+[23:05:57] [main/INFO] [STDOUT/]: 未发现更新。最新版本：(1.16.5-1078)，当前版本：(1.16.5-1078)
+[23:05:57] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmlserver, --fml.mohistVersion, 1078, --fml.forgeVersion, 36.2.39, --fml.mcpVersion, 20210115.111550, --fml.mcVersion, 1.16.5, --fml.forgeGroup, com.mohistmc]
+[23:05:57] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 8.1.3+8.1.3+main-8.1.x.c94d18ec starting: java version 17.0.4.1 by N/A
+[23:05:58] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[23:05:58] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.4 Source=file:/run/media/xycode/58654955-ac7e-4150-9f91-2fa13312a4c6/MCServerManager/MCServerManager/test/libraries/org/spongepowered/mixin/0.8.4/mixin-0.8.4.jar Service=ModLauncher Env=SERVER
+[23:05:58] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmlserver' with arguments [--gameDir, .]
+[23:05:59] [main/INFO] [STDERR/]: [org.slf4j.helpers.Util:report:128]: SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[23:05:59] [main/INFO] [STDERR/]: [org.slf4j.helpers.Util:report:128]: SLF4J: Defaulting to no-operation (NOP) logger implementation
+[23:05:59] [main/INFO] [STDERR/]: [org.slf4j.helpers.Util:report:128]: SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[23:06:02] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 36.2.39, for MC 1.16.5 with MCP 20210115.111550
+[23:06:02] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v36.2.39 Initialized
+[23:06:02] [modloading-worker-0/INFO] [com.mohistmc.MohistMC/]: EventDispatcherRegistry initialized
+[23:06:05] [main/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[23:06:05] [main/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, mohist-1.16.5-1078-universal.jar, bukkit
+[23:06:06] [Worker-Main-8/INFO] [net.minecraft.advancements.AdvancementList/]: 已加载 927 合成表
+[23:06:08] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: 正在启动Minecraft服务器 版本1.16.5
+[23:06:08] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: 加载属性中
+[23:06:08] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: 默认游戏模式: CREATIVE
+[23:06:08] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: 生成密钥对中
+[23:06:08] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: 在 0.0.0.0:25,565 上启动服务器
+[23:06:08] [Server thread/INFO] [net.minecraft.network.NetworkSystem/]: 使用epoll频道类型
+[23:06:09] [Server thread/INFO] [Minecraft/]: This server is running Mohist version 1.16.5-1078 (MC: 1.16.5) (Implementing API version 1.16.5-R0.1-SNAPSHOT, Forge version 36.2.39)
+[23:06:09] [Server thread/INFO] [/]: 服务器ping玩家样本数: 12
+[23:06:09] [Server thread/INFO] [Minecraft/]: 使用 4 线程的基于Netty的IO
+[23:06:09] [Server thread/INFO] [Minecraft/]: 调试输出启用
+[23:06:09] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: 准备地图 "world"
+[23:06:10] [Server thread/INFO] [Minecraft/]: Server permissions file permissions.yml is empty, ignoring it
+[23:06:10] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: 为维度 minecraft:overworld 准备起始区块
+[23:06:11] [Server thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: 准备生成区域: 0%
+[23:06:14] [Worker-Main-7/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: 准备生成区域: 83%
+[23:06:17] [Worker-Main-6/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: 准备生成区域: 84%
+[23:06:18] [Worker-Main-8/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: 准备生成区域: 94%
+[23:06:18] [Server thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: 耗时: 8,358ms
+[23:06:18] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: 完成(8.615s)！输入“/help”获取帮助信息
+[23:06:18] [Server thread/INFO] [Minecraft/]: Timings Reset
+[23:06:18] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Stopping the server
+[23:06:18] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: 关闭服务器中
+[23:06:18] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: 保存玩家数据中
+[23:06:18] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: 保存世界中
+[23:06:18] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[23:06:22] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (world): 所有区块已保存
+[23:06:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[DIM-1]'/minecraft:the_nether
+[23:06:22] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): 所有区块已保存
+[23:06:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[DIM1]'/minecraft:the_end
+[23:06:22] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): 所有区块已保存
+[23:06:22] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (world): 所有区块已保存
+[23:06:22] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): 所有区块已保存
+[23:06:22] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): 所有区块已保存

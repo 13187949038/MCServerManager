@@ -1,9 +1,15 @@
+import json
+import multiprocessing
+import os.path
 import random
 
 import click
 import utils
 import configure
+from downloader import server
 from configure import Generator, ServerProperties
+from prettytable import *
+from downloader.server import download_server
 
 logger = utils.get_logger(__name__)
 
@@ -17,6 +23,12 @@ def cli(ctx):
 @cli.group(help='服务器配置文件管理')
 @click.pass_context
 def config(ctx):
+    pass
+
+
+@cli.group(help='服务器管理')
+@click.pass_context
+def server(ctx):
     pass
 
 
@@ -69,6 +81,62 @@ def init(output: str):
         f.write(cfg.generate())
 
     print('success')
+
+
+@config.command(help='根据配置文件创建服务器')
+@click.option('--file', '-f', help='配置文件', default='./config.json')
+def apply(file: str):
+    file = os.path.abspath(file)
+
+    if os.path.exists(file):
+        with open(file, 'r', encoding='utf-8') as f:
+            cfg = json.loads(f.read())
+
+        server_list: list = server.get_server_list(
+            cfg['server_key']
+        )
+
+        table = PrettyTable()
+        table.field_names = ['服务端编号', '游戏版本', '服务端 jar', 'MD5', '生成日期']
+
+        for build in server_list:
+            table.add_row([
+                server_list.index(build),
+                build['version'],
+                build['name'],
+                build['md5'],
+                build['date']
+            ])
+
+        print(table)
+
+        number = int(input('请输入服务端版本编号：'))
+        server_agent = server_list[number]
+
+        print('选择成功！')
+        print('开始部署！')
+
+        print('下载服务端程序中！')
+        download_server(server_agent['mirror'], './server.jar')
+        print('下载完成！')
+
+        with open('server.properties', 'w', encoding='utf-8') as f:
+            f.write(cfg['config'])
+
+        with open('eula.txt', 'w', encoding='utf-8') as f:
+            f.write('eula=true')
+
+        print('配置完成！')
+
+        print('服务器部署完成！')
+    else:
+        raise Exception(
+            '没有配置文件，请检查当前目录下有没有 config.json 文件。如果没有，请用 -f 参数指定一个，或者用 mcsm config init 来创建一个')
+
+
+@server.command(help='开启服务器')
+def start():
+    utils.start_server()
 
 
 if __name__ == '__main__':
