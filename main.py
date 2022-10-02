@@ -1,4 +1,7 @@
 import click
+import utils
+
+logger = utils.get_logger(__name__)
 
 
 @click.group(help='MC服务器开服工具')
